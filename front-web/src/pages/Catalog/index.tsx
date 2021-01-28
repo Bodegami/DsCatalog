@@ -5,6 +5,7 @@ import { makeRequest } from 'core/utils/request';
 import { ProductsResponse } from 'core/types/Product';
 import ProductCardLoader from './components/Loaders/ProductCardLoader';
 import './styles.scss';
+import Pagination from 'core/components/Pagination';
 
 
 const Catalog = () => {
@@ -39,6 +40,7 @@ const Catalog = () => {
             <Link to={`/products/${product.id}`} key={product.id}><ProductCard product={product} /></Link>
           )))}
       </div>
+      <Pagination />
     </div>
   )
 };
