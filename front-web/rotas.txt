@@ -1,0 +1,28 @@
+##Rotas
+
+/ -> Home
+
+/products -> listagem de produtos
+/products/:productid -> detalhes do produto
+
+/admin -> tela de admin
+
+##CRUD de produtos
+/admin/products -> listagem de produtos
+/admin/products/create -> criar produto
+/admin/products/:productId -> editar produto
+
+##CRUD de categorias
+/admin/categories -> listagem de categorias
+/admin/categories/create -> criar criar categoria
+/admin/categories/:categoryId -> editar categoria
+
+##CRUD de usuários
+/admin/users -> listagem de usuários
+/admin/users/create -> criar criar usuário
+/admin/users/:userId -> editar usuário
+
+##autenticação
+/admin/auth/login -> autenticação do usuário
+/admin/auth/register -> registo de um novo usuário
+/admin/auth/recover -> recuperação de senha
