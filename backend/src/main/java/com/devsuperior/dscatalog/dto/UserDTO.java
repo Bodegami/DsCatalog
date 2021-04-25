@@ -7,8 +7,11 @@ import java.util.Set;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.validation.constraints.Email;
+import javax.validation.constraints.NotBlank;
 
 import com.devsuperior.dscatalog.entities.User;
+
 
 public class UserDTO implements Serializable {
 	private static final long serialVersionUID = 1L;
@@ -16,8 +19,12 @@ public class UserDTO implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
+	
+	@NotBlank(message = "Campo obrigatório")
 	private String firstName;
 	private String lastName;
+	
+	@Email(message = "Favor entrar um email válido...")
 	private String email;
 	
 	Set<RoleDTO> roles = new HashSet<>();
